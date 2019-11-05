@@ -1,0 +1,45 @@
+<h2>Correspondance Mois/Saison</h2>
+Donner un numéro de mois 
+<input type="number"#n (click)="mois(n)">
+<div [ngSwitch]="mois(n.value)">
+        <span *ngSwitchCase="1"> 
+          Le mois{{mois(n.value)}} est en Hiver     
+        </span> 
+        <span *ngSwitchCase="2"> 
+                Le mois {{mois(n.value)}} est en Hiver     
+        </span>
+        <span *ngSwitchCase="3"> 
+                Le mois {{mois(n.value)}} est en Printemps     
+        </span>
+        <span *ngSwitchCase="4"> 
+                Le mois {{mois(n.value)}} est en Printemps     
+        </span>
+        <span *ngSwitchCase="5"> 
+                Le mois {{mois(n.value)}} est en été     
+        </span>
+        <span *ngSwitchCase="6"> 
+                Le mois {{mois(n.value)}} est en été     
+        </span>
+        <span *ngSwitchCase="7"> 
+                Le mois {{mois(n.value)}} est en été     
+        </span>
+        <span *ngSwitchCase="8"> 
+                Le mois {{mois(n.value)}} est en été     
+        </span>
+        <span *ngSwitchCase="9"> 
+                Le mois {{mois(n.value)}} est en Automne     
+        </span>
+        <span *ngSwitchCase="10"> 
+                Le mois {{mois(n.value)}} est en Automne     
+        </span>
+        <span *ngSwitchCase="11"> 
+                Le mois {{mois(n.value)}} est en Automne     
+        </span>
+        <span *ngSwitchCase="12"> 
+                Le mois {{mois(n.value)}} est en Hiver     
+        </span>
+        <span *ngSwitchDefault> 
+                ça ne c'est pas un mois :(     
+        </span>
+      
+</div>

@@ -1,0 +1,9 @@
+<h1>{{titre}}</h1>
+<ol>
+    <li *ngFor ="let t of profils">{{t}}</li>
+</ol>
+Choix d'un profil
+<select  [(ngModel)]="pselect">
+    <option *ngFor ="let t of profils" [value]="t" >{{t}}</option>
+</select>
+<span>Le profil sélectioné est:{{pselect}}</span>

@@ -1,0 +1,22 @@
+<h4>Orientation Etudiant</h4>
+<ul>
+    <li>{{etudiant.nom}}
+    <li>{{etudiant.moyenne}}</li>
+    <li *ngIf="etudiant.moyenne<10;else x">Redouble</li>
+    <ng-template #x><li>
+        Choisir une spécialité
+        <select [(ngModel)]="pselect">
+            <option>DSI</option>
+            <option>RSI</option>
+            <option>SEM</option>
+
+        </select> 
+        <span>Vous avez choisi: {{pselect}}</span>       
+
+
+
+
+
+    </li></ng-template>
+   
+</ul>

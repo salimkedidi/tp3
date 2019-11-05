@@ -1,0 +1,78 @@
+<h2>{{titre2}} </h2>
+<ul>
+<li *ngFor="let t of tab;let indice=index">
+    {{t}}
+  <button *ngIf="t%2==0"  (click)="onPosition(indice+1)">Position</button>
+    
+</li>
+</ul>
+<h2>Affichage des éléments pairs du tableau</h2>
+ <ul> 
+   <ng-container *ngFor="let t of tab"> 
+     <li *ngIf="t%2==0"> 
+       {{t}}
+      </li> 
+    </ng-container>
+   </ul>
+   <h2>Affichage des éléments pairs/impairs ou impairs du tableau</h2>
+<ul> 
+  <ng-container *ngFor="let t of tab"> 
+    <li *ngIf="t%2==0"> 
+      {{t}} nbr pair
+     </li> 
+     <li *ngIf="t%2==1">{{t}} nbr impairs</li>
+   </ng-container>
+  </ul>
+  <h2>Affichage des éléments pairs/impairs du tableau ngif;else</h2>
+  <ul> 
+      <ng-container *ngFor="let t of tab"> 
+        <li *ngIf="t%2==0; else x"> 
+          {{t}} nbr pair
+         </li> 
+         <ng-template #x><li>{{t}} nbr impairs</li></ng-template>
+       </ng-container>
+      </ul>
+
+
+      <h2>Affichage des éléments pairs/impairs du tableau ngif;then;else</h2>
+      <ul> 
+          <ng-container *ngFor="let t of tab"> 
+            <li *ngIf="t%2==0; then y else x"> 
+              
+             </li> 
+             <ng-template #y><li>{{t}} nbr pairs</li></ng-template>
+             <ng-template #x><li>{{t}} nbr impairs</li></ng-template>
+
+           </ng-container>
+          </ul>
+
+
+
+      <h2>Affichage des éléments pairs/impairs du tableau ngSwitch</h2>
+      <ul> 
+          <div *ngFor="let t of tab"> 
+            <span [ngSwitch]="t%2">
+            <li *ngSwitchCase="0"> 
+              {{t}} nbr pair
+             </li> 
+             <li *ngSwitchCase="1"> 
+                {{t}} nbr impair
+               </li>
+            </span>
+            </div>
+          </ul>
+
+
+
+      
+  
+
+   
+   
+
+  
+  
+   
+
+
+

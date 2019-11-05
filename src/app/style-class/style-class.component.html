@@ -1,0 +1,6 @@
+<p [style.color]="couleur" [style.font-size.px]="taille">Paragraphe 2</p>
+<p [ngStyle]="{color:getColor(), 'font-size.px':taille}">Paragraphe 3</p>
+<p [ngStyle]="{color:'white',background:'red','font-size.px':24,'font-style':style}">Paragraphe 4</p>
+<p [ngClass]="classe">Paragraphe5</p> 
+<p [ngClass]="'c2'">Paragraphe6</p>
+<p [ngClass]="admin?'c2':'c1'">Paragraphe7</p>
